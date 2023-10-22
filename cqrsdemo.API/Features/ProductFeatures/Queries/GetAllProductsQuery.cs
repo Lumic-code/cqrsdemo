@@ -1,6 +1,29 @@
-﻿namespace cqrsdemo.API.Features.ProductFeatures.Queries
+﻿using cqrsdemo.API.Context;
+using cqrsdemo.API.Models;
+using MediatR;
+using Microsoft.EntityFrameworkCore;
+
+namespace cqrsdemo.API.Features.ProductFeatures.Queries
 {
-    public class GetAllProductsQuery
+    public class GetAllProductsQuery : IRequest<IEnumerable<Product>>
     {
+        public class GetAllProductsQueryHandler : IRequestHandler<GetAllProductsQuery, IEnumerable<Product>>
+        {
+            private readonly ApplicationContext _context;
+
+            public GetAllProductsQueryHandler(ApplicationContext context)
+            {
+                _context = context;
+            }
+            public async Task<IEnumerable<Product>> Handle(GetAllProductsQuery query, CancellationToken cancellationToken)
+            {
+                var productList = await _context.Products.ToListAsync();
+                if (productList == null)
+                {
+                    return null;
+                }
+                return productList.AsReadOnly();
+            }
+        }
     }
 }

@@ -65,3 +65,4 @@ C:\Users\wisdo\OneDrive\Desktop\cqrsdemo.API\cqrsdemo.API\obj\Debug\net6.0\refin
 C:\Users\wisdo\OneDrive\Desktop\cqrsdemo.API\cqrsdemo.API\obj\Debug\net6.0\cqrsdemo.API.pdb
 C:\Users\wisdo\OneDrive\Desktop\cqrsdemo.API\cqrsdemo.API\obj\Debug\net6.0\cqrsdemo.API.genruntimeconfig.cache
 C:\Users\wisdo\OneDrive\Desktop\cqrsdemo.API\cqrsdemo.API\obj\Debug\net6.0\ref\cqrsdemo.API.dll
+C:\Users\wisdo\OneDrive\Desktop\cqrsdemo.API\cqrsdemo.API\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
